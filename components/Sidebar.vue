@@ -4,7 +4,6 @@
       <h1>WEBSEC</h1>
       <ul>
         <h2><router-link to="/">Home</router-link></h2>
-        <!-- <li><router-link to="/profile">Profile</router-link></li> -->
         <h2><router-link to="/news">News</router-link></h2>
         <h2><router-link to="/extra">Extra</router-link></h2>
         <h2><router-link to="/about">About</router-link></h2>
