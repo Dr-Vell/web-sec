@@ -14,6 +14,6 @@
 <template>
     <div class="contenido"> 
         <h1 class="contenido-titulo">{{ title }}</h1>
-        <iframe :src="route" width="1245" height="700"></iframe>
+        <iframe :src="route" width="1245" height="700" title="game-frame"></iframe>
     </div>
 </template>
