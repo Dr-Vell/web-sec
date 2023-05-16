@@ -48,6 +48,41 @@ body{
    background-position: center;
  }
 
+ .iframe-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 95px);
+  margin-left: 5%;
+}
+
+
+.fullscreen-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+}
+.fullscreen-button {
+  background-color: #565656; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espacio interno */
+  text-align: center; /* Alinear texto al centro */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Mostrar como bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 10px 0; /* Margen superior e inferior */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  border-radius: 4px; /* Borde redondeado */
+  transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+}
+
+.fullscreen-button:hover {
+  background-color: #744800; /* Cambiar color de fondo al pasar por encima */
+}
+
+
+
 
 /* NEWS */
 
