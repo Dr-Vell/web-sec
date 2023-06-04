@@ -9,6 +9,10 @@ const props = defineProps({
   route:{
     type: String,
     required: true,
+  }, 
+  showFullscreenButton: {
+    type: Boolean,
+    default: true,
   },
 });
 
