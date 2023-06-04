@@ -10,6 +10,6 @@
             <br><br>
             Happy learning!            
         </h2>  
-        <img class="about-img" src="about.png" width="300" height="375" alt="_(づ｡◕‿‿◕｡)づ_">
+        <img class="about-img" src="/about.png" width="300" height="375" alt="_(づ｡◕‿‿◕｡)づ_">
     </div>
 </template>
