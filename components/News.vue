@@ -26,9 +26,9 @@
         </div>
       </template>
       <template v-else>
-        <p>Límite de llamadas a las API superado.</p>
-        <p>Espera hasta mañana para ver más.</p> 
-        <p>Perdone las molestias.</p>
+        <p>API call limit exceeded.</p>
+        <p>Please wait until tomorrow to see more.</p>
+        <p>We apologize for any inconvenience.</p>
 
       </template>
     </template>
