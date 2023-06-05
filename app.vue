@@ -7,6 +7,7 @@
 
 <template>
   <div>
+    <Head><Title>WEBSEC</Title></Head>
     <Sidebar />
     <NuxtPage />
   </div>
