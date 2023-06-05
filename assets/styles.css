@@ -249,6 +249,9 @@ body{
   flex-direction: row-reverse;
   margin-top: 5%;   
 }
+.extra-desc{
+  text-align: justify;
+}
 
 @media (max-width: 1030px) {
   .extra-button-div {
@@ -260,8 +263,5 @@ body{
   .extra-button-pic {
     width: auto;
     height: 300px;
-  }
-  h3 {
-    text-align: center;
   }
 }
