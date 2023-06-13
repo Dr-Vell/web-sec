@@ -48,6 +48,52 @@ body{
    background-position: center;
  }
 
+ .iframe-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 95px);
+  margin-left: 5%;
+}
+
+
+.fullscreen-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #565656;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; 
+  font-size: 16px;
+  margin: 10px 0; 
+  cursor: pointer; 
+  border-radius: 4px;
+  transition: background-color 0.3s ease; 
+}
+
+.fullscreen-button:hover {
+  background-color: #744800; 
+}
+
+.download-button {
+  margin-top: 5%;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(209, 124, 13);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #3b2b05;
+}
 
 /* NEWS */
 
@@ -121,7 +167,7 @@ body{
    background-color: rgb(20, 20, 20);
    padding: 20px;
    transition: transform 0.2s ease;
-   transform: translateX(0); /* Añade esta propiedad */
+   transform: translateX(0);
    color: rgb(240, 240, 240);
    
  }
@@ -145,6 +191,7 @@ body{
    z-index: 1000; 
    max-width: 100px;
    color: rgb(240, 240, 240);
+   user-select: none;
  }
  
  .toggle-button:hover {
@@ -170,4 +217,51 @@ body{
    color: rgb(209, 124, 13);
  }
  
- 
+ /* EXTRAS */
+
+ .extra-buttons-container{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.extra-button-pic {
+  float: left;
+  width: 300px;
+  height: auto;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  border-radius: 10%;
+}
+
+.extra-button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 5%;   
+}
+
+.extra-button-div-reverse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-top: 5%;   
+}
+.extra-desc{
+  text-align: justify;
+}
+
+@media (max-width: 1030px) {
+  .extra-button-div {
+    flex-direction: column;
+  }
+  .extra-button-div-reverse {
+    flex-direction: column;
+  }
+  .extra-button-pic {
+    width: auto;
+    height: 300px;
+  }
+}

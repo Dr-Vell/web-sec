@@ -1,0 +1,107 @@
+______   ___   _____     ___  ___                        _ 
+| ___ \ / _ \ /  __ \    |  \/  |                       | |
+| |_/ // /_\ \| /  \/    | .  . | __ _ _ __  _   _  __ _| |
+| ___ \|  _  || |        | |\/| |/ _` | '_ \| | | |/ _` | |
+| |_/ /| | | || \__/\    | |  | | (_| | | | | |_| | (_| | |
+\____(_)_| |_(_)____/    \_|  |_/\__,_|_| |_|\__,_|\__,_|_|                                       
+                                                                                                          
+ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ 
+|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|
+           
+
+ _____      _             
+|_   _|    | |            
+  | | _ __ | |_ _ __ ___  
+  | || '_ \| __| '__/ _ \ 
+ _| || | | | |_| | | (_) |
+ \___/_| |_|\__|_|  \___/ 
+
+
+
+Access control allows enforcing a policy of permissions and roles, meaning that a user can access 
+certain places. These restrictions imply that users cannot act beyond their permissions and, moreover, 
+keep track of who accesses each resource. The vulnerability Broken Access Control allows a user without 
+privileges to access a resource they shouldn't have access to.
+    
+What impact can this have on my company?
+
+ - A cybercriminal could operate within the system with user or administrator permissions.
+ - Access to sensitive records, directories, or files for potential disclosure later on.
+
+ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ 
+|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|
+           
+            
+  ___  _   _             _    
+ / _ \| | | |           | |   
+/ /_\ \ |_| |_ __ _  ___| | __
+|  _  | __| __/ _` |/ __| |/ /
+| | | | |_| || (_| | (__|   < 
+\_| |_/\__|\__\__,_|\___|_|\_\
+                      
+
+
+From the user's perspective, it is important to consider two main types of authorization attacks:
+
+ - Horizontal bypassing:  refers to the situation where an unauthorized user gains access to other 
+			  users' accounts that have the same level of privileges.
+
+ - Vertical bypassing:  an attacker obtains a higher level of privilege, such as root or superuser privilege, 
+			surpassing the intended level granted by the system.
+
+
+Here are some examples of Broken Access Control attacks:
+
+ - Bypassing authentication by manipulating URL or HTTP parameters
+ - Inadecuate session management, leading to session hijacking or fixation.
+ - Using forced browsing to access restricted resources.
+ - Lack of access control checks on APIs, leading to unauthorized acces to sensitive data.
+
+
+
+Here's an example of URL Tampering:
+
+     User A, with minimum privileges on the system, makes the following change in the URL:
+
+     http://example.com/restricted-area.html?session_id=123
+
+	turns into:
+
+     http://example.com/restricted-area.html?session_id=456
+
+     After that change, the website returns the restricted-area of User B.
+    
+ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ 
+|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|
+           
+
+______      __                    
+|  _  \    / _|                   
+| | | |___| |_ ___ _ __  ___  ___ 
+| | | / _ \  _/ _ \ '_ \/ __|/ _ \
+| |/ /  __/ ||  __/ | | \__ \  __/
+|___/ \___|_| \___|_| |_|___/\___|
+                      
+To guard against broken access control attacks, developers can implement several fundamental precautions. 
+The process should start with assessing the access control requirements of the application and creating a 
+security policy that aligns with those requirements. This assessment should include developing an access 
+control matrix, clearly defining which types of users are granted access, and specifying the allowed and 
+prohibited uses of that access.
+
+Implement role-based access control (RBAC) to enforce appropriate restrictions for each role. 
+Ensure that the access control mechanism is correctly applied on the server side, covering all pages and API 
+endpoints in web applications. Mere requests for direct access to a website or resource should not grant users 
+unauthorized functionality or access to data.
+
+Below are the guidelines to avoid broken access control:
+
+ - Avoid relying solely on obfuscation for access control.
+ - Define the level of access granted to each resource in the code itself, with a default denial of all access.
+ - By default, restrict access if a resource is not intended to be publicly shared.
+ - Conduct audits and comprehensive testing of access control to verify its proper functioning.
+
+
+
+
+
+Now, if you feel ready, type "go" to start the challenge.
