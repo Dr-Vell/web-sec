@@ -43,5 +43,6 @@
         </div>
         <a v-if="droute=='1'" href="/pc-builds/Injection_Dungeon-1.0-pc.zip" :download="title + '.zip'"><button class="download-button">Download Game for Windows</button></a>
         <a v-if="droute=='2'" href="/pc-builds/Escape_the_B.A.C._Room-1.0-pc.zip" :download="title + '.zip'"><button class="download-button">Download Game for Windows</button></a>
+        <a v-if="droute=='3'" href="/pc-builds/Crypto_Savior-1.0-pc.zip" :download="title + '.zip'"><button class="download-button">Download Game for Windows</button></a>
     </div>
 </template>
