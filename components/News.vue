@@ -8,7 +8,7 @@
           <img :src="getImagenUrl(articulo)" alt="Artículo imagen" class="articulo-imagen">
           <div class="articulo-info">
             <a :href="articulo.web_url" target="_blank" class="articulo-titulo">{{ articulo.abstract }}</a>
-            <p class="articulo-autor"> {{ articulo.byline.original }} - {{ articulo.pub_date }}</p>
+            <p class="articulo-autor"> {{ articulo.byline.original }} - {{ obtenerFecha(articulo.pub_date) }}</p>
           </div>
         </div>
       </template>
@@ -33,7 +33,11 @@
       return `https://static01.nyt.com/${articulo.multimedia[0].url}`;
     } else {
       // URL de imagen por defecto
-      return '/about.png';
+      return '/news.png';
     }
+  };
+
+  const obtenerFecha = (pubDate) => {
+    return pubDate.substring(0, 10);
   };
 </script>
