@@ -9,6 +9,11 @@ Explore the various vulnerabilities and challenges included, and see if you have
 🎊 Happy learning! 🎊
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deployment: https://websec.netlify.app
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Home Page: 
 
 Here we gather all games. It's hosting 3 games at the moment, but this number will increase in the near future. Stay tuned! 🎮
