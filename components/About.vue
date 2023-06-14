@@ -2,7 +2,7 @@
     <div class="contenido">      
         <h1 class="contenido-titulo">WEBSEC</h1>  
         <h2 class="contenido-texto">            
-            Welcome to the web-sec repository! This repository contains a web application designed to teach users about web application vulnerabilities through interactive games.
+            Welcome to the WEBSEC! This is a web application designed to teach users about web application vulnerabilities through interactive games.
             <br><br>
             Whether you're a beginner looking to learn about web security or an experienced developer looking to test your skills, this platform has something to offer.
             <br><br>

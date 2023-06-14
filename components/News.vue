@@ -22,9 +22,11 @@
 </template>
 
 <script setup>
+  const runtimeConfig = useRuntimeConfig(); 
+  const news_link = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=cybersecurity&sort=newest&api-key=`+ runtimeConfig.newsApiKey;
   const { data: news, pending } = await useAsyncData("news", () =>
     $fetch(
-      `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=cybersecurity&sort=newest&api-key=AvXxhlTigBmQ6QMjJ9aVCugACXUx83Aj`
+      news_link
     )
   );
 
