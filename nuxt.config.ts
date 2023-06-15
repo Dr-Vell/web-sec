@@ -4,7 +4,8 @@ export default defineNuxtConfig({
         public:{
             newsApiKey: process.env.NEWS_API_KEY,  
         }      
-      },
+      }, 
+
     pages: true,
 
     css: ["~/assets/styles.css"],
