@@ -6,10 +6,21 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test:unit": "vitest run --config ./vitest.config.js",
+    "test:unit:watch": "vitest --config ./vitest.config.js",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitest/coverage-c8": "^0.32.0",
+    "jsdom": "^22.1.0",
     "nuxt": "^3.3.3"
+  },
+  "dependencies": {
+    "@nuxt/test-utils": "^3.5.3",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vitest": "^0.31.4"
   }
 }
