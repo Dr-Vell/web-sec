@@ -101,9 +101,13 @@ body{
 .articulo {
    display: flex;
    align-items: center;
-   margin: 10px;
-   border: 1px solid #ccc;
+   margin: 40px;
+   margin-left: 170px;
+   margin-right: 170px;
+   border: 1px solid #a9730f;
    border-radius: 10px;
+   background-color: #302921;
+   box-shadow: 10px 10px 5px rgb(123, 110, 90);
  }
  
  .articulo-imagen {
@@ -139,12 +143,18 @@ body{
    color: #999;
  }
 
-@media screen and (max-width: 550px) {
+ @media screen and (max-width: 1213px) {
+  .articulo {
+     display: block;
+   }
+
+}
+
+@media screen and (max-width: 750px) {
    .articulo {
       display: block;
       margin: 10px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
+      margin-bottom: 40px;
     }
  
 }
