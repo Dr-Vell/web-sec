@@ -14,8 +14,11 @@ describe('Home Tests', async() => {
   it('Renders Game 1 Fullscreen Button', async () => {
     expect(await $fetch('/injection-dungeon')).toMatch('fullscreen-button')
   })
-  it('Renders Game 1 Download Button', async () => {
-    expect(await $fetch('/injection-dungeon')).toMatch('Injection Dungeon.zip')
+  it('Renders Game 1 Download Button 1', async () => {
+    expect(await $fetch('/injection-dungeon')).toMatch('Injection Dungeon - Part 1.zip')
+  })
+  it('Renders Game 1 Download Button 2', async () => {
+    expect(await $fetch('/injection-dungeon')).toMatch('Injection Dungeon - Part 2.zip')
   })
 
 

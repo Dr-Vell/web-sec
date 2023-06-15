@@ -41,7 +41,8 @@
             <iframe :src="route" ref="game_frame" width="100%" height="100%" title="game-frame" class="iframe-game"></iframe>
             <button class="fullscreen-button" @click="toggleFullscreen">⛶</button>
         </div>
-        <a v-if="droute=='1'" href="/pc-builds/Injection_Dungeon-1.0-pc.zip" :download="title + '.zip'"><button class="download-button">Download Game for Windows</button></a>
+        <a v-if="droute=='1'" href="/pc-builds/Injection_Dungeon-1.0-pc.zip.001" :download="title + ' - Part 1.zip'"><button class="download-button">Download Game for Windows (Part 1)</button></a>
+        <a v-if="droute=='1'" href="/pc-builds/Injection_Dungeon-1.0-pc.zip.002" :download="title + ' - Part 2.zip'"><button class="download-button">Download Game for Windows (Part 2)</button></a>
         <a v-if="droute=='2'" href="/pc-builds/Escape_the_B.A.C._Room-1.0-pc.zip" :download="title + '.zip'"><button class="download-button">Download Game for Windows</button></a>
         <a v-if="droute=='3'" href="/pc-builds/Crypto_Savior-1.0-pc.zip" :download="title + '.zip'"><button class="download-button">Download Game for Windows</button></a>
     </div>

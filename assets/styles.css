@@ -80,6 +80,7 @@ body{
 
 .download-button {
   margin-top: 5%;
+  margin-left: 2%;
   display: inline-block;
   padding: 10px 20px;
   background-color: rgb(209, 124, 13);
