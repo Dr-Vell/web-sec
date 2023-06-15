@@ -8,6 +8,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test:unit": "vitest run --config ./vitest.config.js",
+    "test:unit:watch": "vitest --config ./vitest.config.js",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {

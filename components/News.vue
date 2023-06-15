@@ -3,7 +3,7 @@
     <h1 class="contenido-titulo">News</h1> 
     <template v-if="pending">Loading news...</template>
     <template v-else>
-      <template v-if="news">
+      <template v-if="news.response.docs.length > 0">
         <div v-for="articulo in news.response.docs" :key="articulo.web_url" class="articulo">
           <img :src="getImagenUrl(articulo)" alt="Artículo imagen" class="articulo-imagen">
           <div class="articulo-info">
@@ -11,6 +11,9 @@
             <p class="articulo-autor"> {{ articulo.byline.original }} - {{ obtenerFecha(articulo.pub_date) }}</p>
           </div>
         </div>
+      </template>
+      <template v-else-if="news.response.docs.length <= 0">
+        <p>No news found today. :c</p>
       </template>
       <template v-else>
         <p>API call limit exceeded.</p>
