@@ -17,7 +17,7 @@ describe('Home Tests', async() => {
     expect(await $fetch('/')).toMatch('crypto-savior-cover.png')
   })
   it('Renders Game 4', async () => {
-    expect(await $fetch('/')).toMatch('tba-2-cover.png')
+    expect(await $fetch('/')).toMatch('guardian-designer-cover.png')
   })
   
 })
