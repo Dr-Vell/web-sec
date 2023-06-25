@@ -7,8 +7,8 @@ gdjs.Game_32OverCode.GDNewPanelSpriteObjects1= [];
 gdjs.Game_32OverCode.GDNewPanelSpriteObjects2= [];
 gdjs.Game_32OverCode.GDNewPanelSprite2Objects1= [];
 gdjs.Game_32OverCode.GDNewPanelSprite2Objects2= [];
-gdjs.Game_32OverCode.GDNewBBTextObjects1= [];
-gdjs.Game_32OverCode.GDNewBBTextObjects2= [];
+gdjs.Game_32OverCode.GDGameOverObjects1= [];
+gdjs.Game_32OverCode.GDGameOverObjects2= [];
 
 
 gdjs.Game_32OverCode.eventsList0 = function(runtimeScene) {
@@ -53,8 +53,8 @@ gdjs.Game_32OverCode.GDNewPanelSpriteObjects1.length = 0;
 gdjs.Game_32OverCode.GDNewPanelSpriteObjects2.length = 0;
 gdjs.Game_32OverCode.GDNewPanelSprite2Objects1.length = 0;
 gdjs.Game_32OverCode.GDNewPanelSprite2Objects2.length = 0;
-gdjs.Game_32OverCode.GDNewBBTextObjects1.length = 0;
-gdjs.Game_32OverCode.GDNewBBTextObjects2.length = 0;
+gdjs.Game_32OverCode.GDGameOverObjects1.length = 0;
+gdjs.Game_32OverCode.GDGameOverObjects2.length = 0;
 
 gdjs.Game_32OverCode.eventsList0(runtimeScene);
 

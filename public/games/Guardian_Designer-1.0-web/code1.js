@@ -29,15 +29,9 @@ gdjs.BattleCode.GDcursorObjects3= [];
 gdjs.BattleCode.GDCopperRedBarObjects1= [];
 gdjs.BattleCode.GDCopperRedBarObjects2= [];
 gdjs.BattleCode.GDCopperRedBarObjects3= [];
-gdjs.BattleCode.GDNewBBTextObjects1= [];
-gdjs.BattleCode.GDNewBBTextObjects2= [];
-gdjs.BattleCode.GDNewBBTextObjects3= [];
 gdjs.BattleCode.GDPauseBGObjects1= [];
 gdjs.BattleCode.GDPauseBGObjects2= [];
 gdjs.BattleCode.GDPauseBGObjects3= [];
-gdjs.BattleCode.GDQuestionObjects1= [];
-gdjs.BattleCode.GDQuestionObjects2= [];
-gdjs.BattleCode.GDQuestionObjects3= [];
 gdjs.BattleCode.GDButtonAObjects1= [];
 gdjs.BattleCode.GDButtonAObjects2= [];
 gdjs.BattleCode.GDButtonAObjects3= [];
@@ -47,9 +41,18 @@ gdjs.BattleCode.GDButtonBObjects3= [];
 gdjs.BattleCode.GDButtonCObjects1= [];
 gdjs.BattleCode.GDButtonCObjects2= [];
 gdjs.BattleCode.GDButtonCObjects3= [];
-gdjs.BattleCode.GDBoostObjects1= [];
-gdjs.BattleCode.GDBoostObjects2= [];
-gdjs.BattleCode.GDBoostObjects3= [];
+gdjs.BattleCode.GDXPObjects1= [];
+gdjs.BattleCode.GDXPObjects2= [];
+gdjs.BattleCode.GDXPObjects3= [];
+gdjs.BattleCode.GDQuestionsObjects1= [];
+gdjs.BattleCode.GDQuestionsObjects2= [];
+gdjs.BattleCode.GDQuestionsObjects3= [];
+gdjs.BattleCode.GDBoostsObjects1= [];
+gdjs.BattleCode.GDBoostsObjects2= [];
+gdjs.BattleCode.GDBoostsObjects3= [];
+gdjs.BattleCode.GDBoostsShadowObjects1= [];
+gdjs.BattleCode.GDBoostsShadowObjects2= [];
+gdjs.BattleCode.GDBoostsShadowObjects3= [];
 
 
 gdjs.BattleCode.mapOfGDgdjs_46BattleCode_46GDcursorObjects1Objects = Hashtable.newFrom({"cursor": gdjs.BattleCode.GDcursorObjects1});
@@ -218,7 +221,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12256028);
 }
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects1);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
@@ -235,8 +239,11 @@ gdjs.copyArray(runtimeScene.getObjects("Map"), gdjs.BattleCode.GDMapObjects1);
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonCObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonCObjects1[i].Activate(true, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects1[i].setBBText("[outline=red]+ WRONG![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects1[i].setString("+ WRONG!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects1[i].setString("+ WRONG!");
 }
 }}
 
@@ -260,7 +267,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -273,8 +281,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDCopperRedBarObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDCopperRedBarObjects2[i].SetMaxValue(20, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]+ Fire rate![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("+ Fire rate!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("+ Fire rate!");
 }
 }}
 
@@ -324,7 +335,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -343,8 +355,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDCopperRedBarObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDCopperRedBarObjects2[i].SetMaxValue(30, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]SHOTGUN![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("SHOTGUN!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("SHOTGUN!");
 }
 }}
 
@@ -478,7 +493,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -497,8 +513,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDPlayerObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDPlayerObjects2[i].returnVariable(gdjs.BattleCode.GDPlayerObjects2[i].getVariables().getFromIndex(4)).setNumber(0);
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]+ Fire rate![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("+ Fire rate!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("+ Fire rate!");
 }
 }}
 
@@ -660,7 +679,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -679,8 +699,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDCopperRedBarObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDCopperRedBarObjects2[i].SetMaxValue(35, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]+ Fire rate![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("+ Fire rate!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("+ Fire rate!");
 }
 }}
 
@@ -730,7 +753,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -749,8 +773,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDPlayerObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDPlayerObjects2[i].returnVariable(gdjs.BattleCode.GDPlayerObjects2[i].getVariables().getFromIndex(4)).setNumber(0);
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]AK-47![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("AK-47!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("AK-47!");
 }
 }}
 
@@ -772,7 +799,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -791,8 +819,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDPlayerObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDPlayerObjects2[i].returnVariable(gdjs.BattleCode.GDPlayerObjects2[i].getVariables().getFromIndex(4)).setNumber(0);
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]+ Fire rate![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("+ Fire rate!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("+ Fire rate!");
 }
 }}
 
@@ -926,7 +957,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -939,8 +971,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDCopperRedBarObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDCopperRedBarObjects2[i].SetMaxValue(25, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]+ Fire rate![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("+ Fire rate!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("+ Fire rate!");
 }
 }}
 
@@ -1018,7 +1053,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -1037,8 +1073,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDCopperRedBarObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDCopperRedBarObjects2[i].SetMaxValue(40, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]+ 1 bullet![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("+ 1 bullet!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("+ 1 bullet!");
 }
 }}
 
@@ -1144,7 +1183,8 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDPlayerObjects2.length;i<l;++i) {
 }
 gdjs.BattleCode.GDPlayerObjects2.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects2);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects2);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 /* Reuse gdjs.BattleCode.GDPlayerObjects2 */
@@ -1163,8 +1203,11 @@ gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.BattleCode.GDGunObjects2);
 }{for(var i = 0, len = gdjs.BattleCode.GDPlayerObjects2.length ;i < len;++i) {
     gdjs.BattleCode.GDPlayerObjects2[i].returnVariable(gdjs.BattleCode.GDPlayerObjects2[i].getVariables().getFromIndex(4)).setNumber(0);
 }
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects2.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects2[i].setBBText("[outline=yellow]MINIGUN![/outline]");
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects2[i].setString("MINIGUN!");
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects2.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects2[i].setString("MINIGUN!");
 }
 }}
 
@@ -1915,9 +1958,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]What does Insecure Design in web application development refer to?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("What does Insecure Design in web application development refer to?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("Missing or ineffective control design resulting in vulnerabilities", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -1951,9 +1994,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]What are some measures for developing secure software?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("What are some measures for developing secure software?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("Implementing an insecure development lifecycle", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -1987,9 +2030,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]What is a potential impact of insecure design on a company?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("What is a potential impact of insecure design on a company?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("Exposure and potential modification of data by cybercriminals", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -2023,9 +2066,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]Why is it crucial to avoid using a questions and answers credential recovery workflow in web application development?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("Why is it crucial to avoid using a questions and answers credential recovery workflow in web application development?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("It improves user experience.", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -2059,9 +2102,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]What is the potential consequence of attackers exploiting the group booking flow without a deposit requirement?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("What is the potential consequence of attackers exploiting the group booking flow without a deposit requirement?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("Increased attendance at cinemas.", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -2095,9 +2138,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]How can careful anti-bot design and domain logic rules help mitigate the issue of scalpers buying high-end video cards on the retail chain's e-commerce website?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("How can careful anti-bot design and domain logic rules help mitigate the issue of scalpers buying high-end video cards on the retail chain's e-commerce website?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("By increasing publicity for video card makers.", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -2131,9 +2174,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]What should be done to identify potential vulnerabilities and risks in critical areas during the development process?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("What should be done to identify potential vulnerabilities and risks in critical areas during the development process?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("Implement plausibility checks at each tier of the application", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -2167,9 +2210,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]How can security considerations be integrated throughout the development process?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("How can security considerations be integrated throughout the development process?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("Incorporate security language and controls into user stories", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -2203,9 +2246,9 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setBBText("[outline=yellow]What is the recommended approach to enhance security in a multi-tenant environment?[/outline]");
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setString("What is the recommended approach to enhance security in a multi-tenant environment?");
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDButtonAObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonAObjects1[i].SetLabelText("Utilize threat modeling to identify vulnerabilities", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -2270,7 +2313,7 @@ gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObje
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
 gdjs.copyArray(runtimeScene.getObjects("PauseBG"), gdjs.BattleCode.GDPauseBGObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
 {for(var i = 0, len = gdjs.BattleCode.GDPauseBGObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDPauseBGObjects1[i].setZOrder(99);
 }
@@ -2283,8 +2326,8 @@ for(var i = 0, len = gdjs.BattleCode.GDButtonBObjects1.length ;i < len;++i) {
 for(var i = 0, len = gdjs.BattleCode.GDButtonCObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonCObjects1[i].setZOrder(99);
 }
-for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setZOrder(99);
+for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setZOrder(99);
 }
 }{gdjs.evtTools.runtimeScene.setTimeScale(runtimeScene, 0);
 }}
@@ -2388,14 +2431,15 @@ for (var i = 0, k = 0, l = gdjs.BattleCode.GDMapObjects1.length;i<l;++i) {
 }
 gdjs.BattleCode.GDMapObjects1.length = k;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects1);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonA"), gdjs.BattleCode.GDButtonAObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonB"), gdjs.BattleCode.GDButtonBObjects1);
 gdjs.copyArray(runtimeScene.getObjects("ButtonC"), gdjs.BattleCode.GDButtonCObjects1);
 gdjs.copyArray(runtimeScene.getObjects("CopperRedBar"), gdjs.BattleCode.GDCopperRedBarObjects1);
 /* Reuse gdjs.BattleCode.GDMapObjects1 */
 gdjs.copyArray(runtimeScene.getObjects("PauseBG"), gdjs.BattleCode.GDPauseBGObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Question"), gdjs.BattleCode.GDQuestionObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Questions"), gdjs.BattleCode.GDQuestionsObjects1);
 {gdjs.evtTools.runtimeScene.setTimeScale(runtimeScene, 1);
 }{for(var i = 0, len = gdjs.BattleCode.GDMapObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDMapObjects1[i].returnVariable(gdjs.BattleCode.GDMapObjects1[i].getVariables().getFromIndex(0)).setNumber(0);
@@ -2412,15 +2456,18 @@ for(var i = 0, len = gdjs.BattleCode.GDButtonBObjects1.length ;i < len;++i) {
 for(var i = 0, len = gdjs.BattleCode.GDButtonCObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDButtonCObjects1[i].setZOrder(-(10));
 }
-for(var i = 0, len = gdjs.BattleCode.GDQuestionObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDQuestionObjects1[i].setZOrder(-(10));
+for(var i = 0, len = gdjs.BattleCode.GDQuestionsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDQuestionsObjects1[i].setZOrder(-(10));
 }
 }{for(var i = 0, len = gdjs.BattleCode.GDCopperRedBarObjects1.length ;i < len;++i) {
     gdjs.BattleCode.GDCopperRedBarObjects1[i].SetValue(0, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Boost");
-}{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects1[i].setZOrder(105);
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects1[i].setZOrder(105);
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects1[i].setZOrder(104);
 }
 }}
 
@@ -2434,9 +2481,13 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "Boost") >= 2;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects1);
-{for(var i = 0, len = gdjs.BattleCode.GDBoostObjects1.length ;i < len;++i) {
-    gdjs.BattleCode.GDBoostObjects1[i].setZOrder(-(99));
+gdjs.copyArray(runtimeScene.getObjects("Boosts"), gdjs.BattleCode.GDBoostsObjects1);
+gdjs.copyArray(runtimeScene.getObjects("BoostsShadow"), gdjs.BattleCode.GDBoostsShadowObjects1);
+{for(var i = 0, len = gdjs.BattleCode.GDBoostsObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsObjects1[i].setZOrder(-(99));
+}
+}{for(var i = 0, len = gdjs.BattleCode.GDBoostsShadowObjects1.length ;i < len;++i) {
+    gdjs.BattleCode.GDBoostsShadowObjects1[i].setZOrder(-(99));
 }
 }}
 
@@ -2508,15 +2559,9 @@ gdjs.BattleCode.GDcursorObjects3.length = 0;
 gdjs.BattleCode.GDCopperRedBarObjects1.length = 0;
 gdjs.BattleCode.GDCopperRedBarObjects2.length = 0;
 gdjs.BattleCode.GDCopperRedBarObjects3.length = 0;
-gdjs.BattleCode.GDNewBBTextObjects1.length = 0;
-gdjs.BattleCode.GDNewBBTextObjects2.length = 0;
-gdjs.BattleCode.GDNewBBTextObjects3.length = 0;
 gdjs.BattleCode.GDPauseBGObjects1.length = 0;
 gdjs.BattleCode.GDPauseBGObjects2.length = 0;
 gdjs.BattleCode.GDPauseBGObjects3.length = 0;
-gdjs.BattleCode.GDQuestionObjects1.length = 0;
-gdjs.BattleCode.GDQuestionObjects2.length = 0;
-gdjs.BattleCode.GDQuestionObjects3.length = 0;
 gdjs.BattleCode.GDButtonAObjects1.length = 0;
 gdjs.BattleCode.GDButtonAObjects2.length = 0;
 gdjs.BattleCode.GDButtonAObjects3.length = 0;
@@ -2526,9 +2571,18 @@ gdjs.BattleCode.GDButtonBObjects3.length = 0;
 gdjs.BattleCode.GDButtonCObjects1.length = 0;
 gdjs.BattleCode.GDButtonCObjects2.length = 0;
 gdjs.BattleCode.GDButtonCObjects3.length = 0;
-gdjs.BattleCode.GDBoostObjects1.length = 0;
-gdjs.BattleCode.GDBoostObjects2.length = 0;
-gdjs.BattleCode.GDBoostObjects3.length = 0;
+gdjs.BattleCode.GDXPObjects1.length = 0;
+gdjs.BattleCode.GDXPObjects2.length = 0;
+gdjs.BattleCode.GDXPObjects3.length = 0;
+gdjs.BattleCode.GDQuestionsObjects1.length = 0;
+gdjs.BattleCode.GDQuestionsObjects2.length = 0;
+gdjs.BattleCode.GDQuestionsObjects3.length = 0;
+gdjs.BattleCode.GDBoostsObjects1.length = 0;
+gdjs.BattleCode.GDBoostsObjects2.length = 0;
+gdjs.BattleCode.GDBoostsObjects3.length = 0;
+gdjs.BattleCode.GDBoostsShadowObjects1.length = 0;
+gdjs.BattleCode.GDBoostsShadowObjects2.length = 0;
+gdjs.BattleCode.GDBoostsShadowObjects3.length = 0;
 
 gdjs.BattleCode.eventsList7(runtimeScene);
 
