@@ -49,4 +49,16 @@ describe('Home Tests', async() => {
     expect(await $fetch('/crypto-savior')).toMatch('Crypto Savior.zip')
   })
   
+  it('Renders Title 4', async () => {
+    expect(await $fetch('/guardian-designer')).toMatch('Guardian Designer')
+  })
+  it('Renders Game 4 Iframe', async () => {
+    expect(await $fetch('/guardian-designer')).toMatch('iframe')
+  })
+  it('Renders Game 4 Fullscreen Button', async () => {
+    expect(await $fetch('/guardian-designer')).toMatch('fullscreen-button')
+  })
+  it('Renders Game 4 Download Button', async () => {
+    expect(await $fetch('/guardian-designer')).toMatch('Guardian Designer.zip')
+  })
 })
