@@ -19,12 +19,12 @@ gdjs.IntroCode.GDGuideBox1Objects1= [];
 gdjs.IntroCode.GDGuideBox1Objects2= [];
 gdjs.IntroCode.GDGuideBox2Objects1= [];
 gdjs.IntroCode.GDGuideBox2Objects2= [];
-gdjs.IntroCode.GDGuideText1Objects1= [];
-gdjs.IntroCode.GDGuideText1Objects2= [];
-gdjs.IntroCode.GDGuideText2Objects1= [];
-gdjs.IntroCode.GDGuideText2Objects2= [];
-gdjs.IntroCode.GDGuideTitleObjects1= [];
-gdjs.IntroCode.GDGuideTitleObjects2= [];
+gdjs.IntroCode.GDGuideText01Objects1= [];
+gdjs.IntroCode.GDGuideText01Objects2= [];
+gdjs.IntroCode.GDGuideText02Objects1= [];
+gdjs.IntroCode.GDGuideText02Objects2= [];
+gdjs.IntroCode.GDGuiteTitle01Objects1= [];
+gdjs.IntroCode.GDGuiteTitle01Objects2= [];
 
 
 gdjs.IntroCode.mapOfGDgdjs_46IntroCode_46GDEntranceObjects1Objects = Hashtable.newFrom({"Entrance": gdjs.IntroCode.GDEntranceObjects1});
@@ -85,32 +85,23 @@ isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.IntroCode.ma
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("GuideBox1"), gdjs.IntroCode.GDGuideBox1Objects1);
 gdjs.copyArray(runtimeScene.getObjects("GuideBox2"), gdjs.IntroCode.GDGuideBox2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText1"), gdjs.IntroCode.GDGuideText1Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText2"), gdjs.IntroCode.GDGuideText2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideTitle"), gdjs.IntroCode.GDGuideTitleObjects1);
-{for(var i = 0, len = gdjs.IntroCode.GDGuideTitleObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideTitleObjects1[i].setBBText("[shadow=brown]INTRO[/shadow]");
+gdjs.copyArray(runtimeScene.getObjects("GuideText01"), gdjs.IntroCode.GDGuideText01Objects1);
+gdjs.copyArray(runtimeScene.getObjects("GuideText02"), gdjs.IntroCode.GDGuideText02Objects1);
+gdjs.copyArray(runtimeScene.getObjects("GuiteTitle01"), gdjs.IntroCode.GDGuiteTitle01Objects1);
+{for(var i = 0, len = gdjs.IntroCode.GDGuiteTitle01Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuiteTitle01Objects1[i].setString("INTRO");
 }
-}{for(var i = 0, len = gdjs.IntroCode.GDGuideText1Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText1Objects1[i].setBBText("The concept of insecure design encompasses various vulnerabilities referred to as missing or ineffective control design. It is crucial to prioritize application security right from the initial design phase when developing a web application.\n\n\nA secure design approach involves a culture and methodology that consistently assesses potential threats and ensures that the code is meticulously designed and tested to mitigate known attack techniques.\n\n\nDeveloping secure software necessitates implementing a secure development lifecycle, incorporating secure design patterns, following a paved road methodology, utilizing a secured component library, employing appropriate tools, and conducting threat modeling.\n");
+}{for(var i = 0, len = gdjs.IntroCode.GDGuideText01Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuideText01Objects1[i].setString("The concept of insecure design encompasses various vulnerabilities referred to as missing or ineffective control design. It is crucial to prioritize application security right from the initial design phase when developing a web application.\n\n\nA secure design approach involves a culture and methodology that consistently assesses potential threats and ensures that the code is meticulously designed and tested to mitigate known attack techniques.\n\n\nDeveloping secure software necessitates implementing a secure development lifecycle, incorporating secure design patterns, following a paved road methodology, utilizing a secured component library, employing appropriate tools, and conducting threat modeling.\n");
 }
-}{for(var i = 0, len = gdjs.IntroCode.GDGuideText2Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText2Objects1[i].setBBText("What impact can this have on my company?\n\n- Exposure and potential modification of data by a cybercriminal. \n\n - Unauthorized access to the server/application by a cybercriminal with administrator or user privileges.");
+}{for(var i = 0, len = gdjs.IntroCode.GDGuideText02Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuideText02Objects1[i].setString("What impact can this have on my company?\n\n- Exposure and potential modification of data by a cybercriminal. \n\n - Unauthorized access to the server/application by a cybercriminal with administrator or user privileges.");
 }
 }{for(var i = 0, len = gdjs.IntroCode.GDGuideBox1Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox1Objects1[i].setZOrder(99);
 }
-for(var i = 0, len = gdjs.IntroCode.GDGuideTitleObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideTitleObjects1[i].setZOrder(99);
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText2Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText2Objects1[i].setZOrder(99);
-}
 for(var i = 0, len = gdjs.IntroCode.GDGuideBox2Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox2Objects1[i].setZOrder(99);
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText1Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText1Objects1[i].setZOrder(99);
 }
 }}
 
@@ -128,32 +119,23 @@ isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.IntroCode.ma
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("GuideBox1"), gdjs.IntroCode.GDGuideBox1Objects1);
 gdjs.copyArray(runtimeScene.getObjects("GuideBox2"), gdjs.IntroCode.GDGuideBox2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText1"), gdjs.IntroCode.GDGuideText1Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText2"), gdjs.IntroCode.GDGuideText2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideTitle"), gdjs.IntroCode.GDGuideTitleObjects1);
-{for(var i = 0, len = gdjs.IntroCode.GDGuideTitleObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideTitleObjects1[i].setBBText("[shadow=brown]ATTACK[/shadow]");
+gdjs.copyArray(runtimeScene.getObjects("GuideText01"), gdjs.IntroCode.GDGuideText01Objects1);
+gdjs.copyArray(runtimeScene.getObjects("GuideText02"), gdjs.IntroCode.GDGuideText02Objects1);
+gdjs.copyArray(runtimeScene.getObjects("GuiteTitle01"), gdjs.IntroCode.GDGuiteTitle01Objects1);
+{for(var i = 0, len = gdjs.IntroCode.GDGuiteTitle01Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuiteTitle01Objects1[i].setString("ATTACK");
 }
-}{for(var i = 0, len = gdjs.IntroCode.GDGuideText1Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText1Objects1[i].setBBText("Scenario #1:  When it comes to the development of a web application, it is crucial to avoid using a questions and answers credential recovery workflow. This approach is prohibited by NIST 800-63b, the OWASP ASVS, and the OWASP Top 10 due to its inherent security risks. Since multiple individuals can know the answers, questions and answers cannot be relied upon as evidence of identity. Therefore, it is necessary to eliminate such code and implement a more secure design.\n\nScenario #2:  A cinema chain offers group booking discounts, but there is a requirement of a deposit if the number of attendees exceeds fifteen. In this scenario, attackers could potentially exploit this flow by attempting to book six hundred seats across all cinemas with just a few requests. This could lead to a significant loss of income. It is essential to consider the potential threat and thoroughly test the system to prevent such attacks");
+}{for(var i = 0, len = gdjs.IntroCode.GDGuideText01Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuideText01Objects1[i].setString("Scenario #1:  When it comes to the development of a web application, it is crucial to avoid using a questions and answers credential recovery workflow. This approach is prohibited by NIST 800-63b, the OWASP ASVS, and the OWASP Top 10 due to its inherent security risks. Since multiple individuals can know the answers, questions and answers cannot be relied upon as evidence of identity. Therefore, it is necessary to eliminate such code and implement a more secure design.\n\nScenario #2:  A cinema chain offers group booking discounts, but there is a requirement of a deposit if the number of attendees exceeds fifteen. In this scenario, attackers could potentially exploit this flow by attempting to book six hundred seats across all cinemas with just a few requests. This could lead to a significant loss of income. It is essential to consider the potential threat and thoroughly test the system to prevent such attacks");
 }
-}{for(var i = 0, len = gdjs.IntroCode.GDGuideText2Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText2Objects1[i].setBBText("Scenario #3: A retail chain’s e-commerce website does not have protection against bots run by scalpers buying high-end video cards to resell auction websites. This creates terrible publicity for the video card makers and retail chain owners and enduring bad blood with enthusiasts who cannot obtain these cards at any price. Careful anti-bot design and domain logic rules, such as purchases made within a few seconds of availability, might identify inauthentic purchases and rejected such transactions.");
+}{for(var i = 0, len = gdjs.IntroCode.GDGuideText02Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuideText02Objects1[i].setString("Scenario #3: A retail chain’s e-commerce website does not have protection against bots run by scalpers buying high-end video cards to resell auction websites. This creates terrible publicity for the video card makers and retail chain owners and enduring bad blood with enthusiasts who cannot obtain these cards at any price. Careful anti-bot design and domain logic rules, such as purchases made within a few seconds of availability, might identify inauthentic purchases and rejected such transactions.");
 }
 }{for(var i = 0, len = gdjs.IntroCode.GDGuideBox1Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox1Objects1[i].setZOrder(99);
 }
-for(var i = 0, len = gdjs.IntroCode.GDGuideTitleObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideTitleObjects1[i].setZOrder(99);
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText2Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText2Objects1[i].setZOrder(99);
-}
 for(var i = 0, len = gdjs.IntroCode.GDGuideBox2Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox2Objects1[i].setZOrder(99);
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText1Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText1Objects1[i].setZOrder(99);
 }
 }}
 
@@ -171,32 +153,23 @@ isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.IntroCode.ma
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("GuideBox1"), gdjs.IntroCode.GDGuideBox1Objects1);
 gdjs.copyArray(runtimeScene.getObjects("GuideBox2"), gdjs.IntroCode.GDGuideBox2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText1"), gdjs.IntroCode.GDGuideText1Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText2"), gdjs.IntroCode.GDGuideText2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideTitle"), gdjs.IntroCode.GDGuideTitleObjects1);
-{for(var i = 0, len = gdjs.IntroCode.GDGuideTitleObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideTitleObjects1[i].setBBText("[shadow=brown]DEFENSE[/shadow]");
+gdjs.copyArray(runtimeScene.getObjects("GuideText01"), gdjs.IntroCode.GDGuideText01Objects1);
+gdjs.copyArray(runtimeScene.getObjects("GuideText02"), gdjs.IntroCode.GDGuideText02Objects1);
+gdjs.copyArray(runtimeScene.getObjects("GuiteTitle01"), gdjs.IntroCode.GDGuiteTitle01Objects1);
+{for(var i = 0, len = gdjs.IntroCode.GDGuiteTitle01Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuiteTitle01Objects1[i].setString("DEFENSE");
 }
-}{for(var i = 0, len = gdjs.IntroCode.GDGuideText1Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText1Objects1[i].setBBText("Here's a list of ideas to prevent this vulnerability:\n\n - Implement and follow a secure development lifecycle by collaborating with application security professionals who can assist in evaluating and designing security and privacy controls.\n\n - Establish and utilize a library of secure design patterns or ready-to-use components to ensure a more secure development process.\n\n - Utilize threat modeling to identify potential vulnerabilities and risks in critical areas such as authentication, access control, business logic, and key workflows.\n\n - Incorporate security language and controls into user stories to ensure that security considerations are integrated throughout the development process.");
+}{for(var i = 0, len = gdjs.IntroCode.GDGuideText01Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuideText01Objects1[i].setString("Here's a list of ideas to prevent this vulnerability:\n\n - Implement and follow a secure development lifecycle by collaborating with application security professionals who can assist in evaluating and designing security and privacy controls.\n\n - Establish and utilize a library of secure design patterns or ready-to-use components to ensure a more secure development process.\n\n - Utilize threat modeling to identify potential vulnerabilities and risks in critical areas such as authentication, access control, business logic, and key workflows.\n\n - Incorporate security language and controls into user stories to ensure that security considerations are integrated throughout the development process.");
 }
-}{for(var i = 0, len = gdjs.IntroCode.GDGuideText2Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText2Objects1[i].setBBText(" - Implement plausibility checks at each tier of your application, ranging from the frontend to the backend, to validate the integrity and security of the system.\n\n - Create unit and integration tests to validate that critical workflows are resistant to potential threats outlined in the threat model. Compile use-cases and misuse-cases for each tier of the application.\n\n - Segregate different layers of the system and network based on their exposure and protection requirements to enhance security.\n\n - Implement robust segregation of tenants across all tiers to ensure secure multi-tenancy.\n\n - Enforce limitations on resource consumption by users or services to prevent excessive utilization.");
+}{for(var i = 0, len = gdjs.IntroCode.GDGuideText02Objects1.length ;i < len;++i) {
+    gdjs.IntroCode.GDGuideText02Objects1[i].setString(" - Implement plausibility checks at each tier of your application, ranging from the frontend to the backend, to validate the integrity and security of the system.\n\n - Create unit and integration tests to validate that critical workflows are resistant to potential threats outlined in the threat model. Compile use-cases and misuse-cases for each tier of the application.\n\n - Segregate different layers of the system and network based on their exposure and protection requirements to enhance security.\n\n - Implement robust segregation of tenants across all tiers to ensure secure multi-tenancy.\n\n - Enforce limitations on resource consumption by users or services to prevent excessive utilization.");
 }
 }{for(var i = 0, len = gdjs.IntroCode.GDGuideBox1Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox1Objects1[i].setZOrder(99);
 }
-for(var i = 0, len = gdjs.IntroCode.GDGuideTitleObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideTitleObjects1[i].setZOrder(99);
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText2Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText2Objects1[i].setZOrder(99);
-}
 for(var i = 0, len = gdjs.IntroCode.GDGuideBox2Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox2Objects1[i].setZOrder(99);
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText1Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText1Objects1[i].setZOrder(99);
 }
 }}
 
@@ -224,23 +197,11 @@ isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.IntroCode.ma
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("GuideBox1"), gdjs.IntroCode.GDGuideBox1Objects1);
 gdjs.copyArray(runtimeScene.getObjects("GuideBox2"), gdjs.IntroCode.GDGuideBox2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText1"), gdjs.IntroCode.GDGuideText1Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideText2"), gdjs.IntroCode.GDGuideText2Objects1);
-gdjs.copyArray(runtimeScene.getObjects("GuideTitle"), gdjs.IntroCode.GDGuideTitleObjects1);
 {for(var i = 0, len = gdjs.IntroCode.GDGuideBox1Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox1Objects1[i].setZOrder(-(10));
 }
-for(var i = 0, len = gdjs.IntroCode.GDGuideTitleObjects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideTitleObjects1[i].setZOrder(-(10));
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText2Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText2Objects1[i].setZOrder(-(10));
-}
 for(var i = 0, len = gdjs.IntroCode.GDGuideBox2Objects1.length ;i < len;++i) {
     gdjs.IntroCode.GDGuideBox2Objects1[i].setZOrder(-(10));
-}
-for(var i = 0, len = gdjs.IntroCode.GDGuideText1Objects1.length ;i < len;++i) {
-    gdjs.IntroCode.GDGuideText1Objects1[i].setZOrder(-(10));
 }
 }}
 
@@ -542,12 +503,12 @@ gdjs.IntroCode.GDGuideBox1Objects1.length = 0;
 gdjs.IntroCode.GDGuideBox1Objects2.length = 0;
 gdjs.IntroCode.GDGuideBox2Objects1.length = 0;
 gdjs.IntroCode.GDGuideBox2Objects2.length = 0;
-gdjs.IntroCode.GDGuideText1Objects1.length = 0;
-gdjs.IntroCode.GDGuideText1Objects2.length = 0;
-gdjs.IntroCode.GDGuideText2Objects1.length = 0;
-gdjs.IntroCode.GDGuideText2Objects2.length = 0;
-gdjs.IntroCode.GDGuideTitleObjects1.length = 0;
-gdjs.IntroCode.GDGuideTitleObjects2.length = 0;
+gdjs.IntroCode.GDGuideText01Objects1.length = 0;
+gdjs.IntroCode.GDGuideText01Objects2.length = 0;
+gdjs.IntroCode.GDGuideText02Objects1.length = 0;
+gdjs.IntroCode.GDGuideText02Objects2.length = 0;
+gdjs.IntroCode.GDGuiteTitle01Objects1.length = 0;
+gdjs.IntroCode.GDGuiteTitle01Objects2.length = 0;
 
 gdjs.IntroCode.eventsList0(runtimeScene);
 

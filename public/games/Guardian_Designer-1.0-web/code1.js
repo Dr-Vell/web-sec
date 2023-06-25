@@ -215,7 +215,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12134340);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12256028);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("Boost"), gdjs.BattleCode.GDBoostObjects1);
