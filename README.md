@@ -16,7 +16,7 @@ Deployment: https://websec.netlify.app
 
 ### Home Page: 
 
-Here we gather all games. It's hosting 3 games at the moment, but this number will increase in the near future. Stay tuned! 🎮
+Here we gather all games. It's hosting 4 games at the moment, but this number will increase in the near future. Stay tuned! 🎮
 
 ![Home](http://i.imgur.com/IwaRWoI.jpg)
 
@@ -43,6 +43,16 @@ First Person Horror Game made in Unity. In this game you need to scape the B.A.C
 2D RPG game made with Godot. It appears in WEB-SEC website. It's an educational game about a common web vulnerability known as Cryptographic Failure. Enjoy it! 🐧
 
 ![Crypto Savior](http://i.imgur.com/9kpvsrC.jpg)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Guardian Designer
+
+2D Wave Clearing game made with GDevelop. It appears in WEB-SEC website. It's an educational game about a common web vulnerability known as Insecure Design. Enjoy it! 🔫
+
+![Crypto Savior](http://i.imgur.com/6ccABkk.jpg)
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
