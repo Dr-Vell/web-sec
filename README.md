@@ -14,7 +14,7 @@ Deployment: https://websec.netlify.app
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Home Page: 
+### Home Page
 
 Here we gather all games. It's hosting 4 games at the moment, but this number will increase in the near future. Stay tuned! 🎮
 
@@ -22,7 +22,7 @@ Here we gather all games. It's hosting 4 games at the moment, but this number wi
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### INJECTION DUNGEON 
+### Injection Dungeon
 
 Visual Novel game made with Ren'Py. It's an educational game about a common web vulnerability known as Injection. Enjoy it! 💀
 
@@ -60,7 +60,7 @@ First Person Horror Game made in Unity. In this game you need to scape the B.A.C
 
 Here you will find recent news brought by NYTimes about cybersecurity. You dont want to miss out on these! 😎
 
-![News](http://i.imgur.com/jMY6xmj.jpg)
+![News](http://i.imgur.com/kJfS2fr.jpg)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
